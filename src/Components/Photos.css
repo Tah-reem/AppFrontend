@@ -1,0 +1,33 @@
+.photo-folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.photo-folder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.folder-thumbnail {
+  position: relative;
+  text-align: center;
+}
+
+.thumbnail-img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.folder-text {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #06042c; /* Teal color */
+  font-weight: 600;
+}

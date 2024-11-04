@@ -1,0 +1,103 @@
+.todos-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #06042c;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+tr:nth-child(even) {background-color: #d9d9e9;}
+
+tbody tr:hover {background-color: #e7e7ef;}
+
+thead tr {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+tr.completed td {
+  text-decoration: line-through;
+  background-color: #e0e0e0;
+}
+
+#todo-form,
+.edit-todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #343a40;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+#todo-form input:not([type="checkbox"]),
+.edit-todo-form input:not([type="checkbox"]) {
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px; 
+}
+
+#todo-form input[type="checkbox"],
+.edit-todo-form input[type="checkbox"] {
+  width: auto; 
+  margin: 0 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fa-plus,
+.fa-edit,
+.fa-trash {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  #todo-form input,
+  .edit-todo-form input {
+    width: 200px;
+  }
+}

@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    padding: 30px;
+    background-color:#06042c;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    align-items: center; 
+  }
+  
+  .nav-link {
+    margin: 0 10px; 
+    font-size: 18px; 
+  }
+  
+  .nav-link.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .nav-item a.btn {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item a.btn:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+  }
+  

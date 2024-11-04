@@ -1,0 +1,52 @@
+.friends-container {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap: 15px; 
+  justify-content: center; 
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.friend-item {
+  width: 200px; 
+  background-color: #f7f7ad; 
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.friend-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.friend-item h4 {
+  color: #06042c; 
+  font-size: 1.2rem; 
+  margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.friend-item p {
+  color: #06042c; 
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.friend-item button {
+  background-color: #004d40; 
+  color: #ffffff; 
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.friend-item button:hover {
+  background-color: #00796b; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}

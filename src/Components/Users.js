@@ -58,7 +58,7 @@ const Users = () => {
     event.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/${editUserId}`, editUser, {
+      await axios.put(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/users/${editUserId}`, editUser, {
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const Users = () => {
   const handleDeleteUser = async (userId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/${userId}`, {
+      await axios.delete(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/users/${userId}`, {
         headers: {
           authorization: `Bearer ${token}`,
         },

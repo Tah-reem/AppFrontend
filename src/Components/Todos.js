@@ -19,7 +19,7 @@ const Todos = () => {
   const fetchTodos = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("https://remaining-bella-tahreem-990bcb8d.koyeb.app/todos", {
+      const response = await axios.get("${API_BASE_URL}/todos", {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -35,7 +35,7 @@ const Todos = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "https://remaining-bella-tahreem-990bcb8d.koyeb.app/todos",
+        "${API_BASE_URL}/todos",
         newTodo,
         {
           headers: {
@@ -57,7 +57,7 @@ const Todos = () => {
     event.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/todos/${todoId}`, editingTodo, {
+      await axios.put(`${API_BASE_URL}/todos/${todoId}`, editingTodo, {
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ const Todos = () => {
   const deleteTodo = async (todoId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`https://remaining-bella-tahreem-990bcb8d.koyeb.app/todos/${todoId}`, {
+      await axios.delete(`${API_BASE_URL}/todos/${todoId}`, {
         headers: {
           authorization: `Bearer ${token}`,
         },

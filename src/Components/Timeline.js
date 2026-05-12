@@ -20,7 +20,7 @@ const Timeline = () => {
         const token = localStorage.getItem("token");
 
         const postsResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/postings",
+          "${API_BASE_URL}/postings",
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -28,7 +28,7 @@ const Timeline = () => {
           }
         );
         const commentsResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/comments",
+          "${API_BASE_URL}/comments",
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ const Timeline = () => {
         setComments(commentsResponse.data);
 
         const photosResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/api/photos",
+          "${API_BASE_URL}/api/photos",
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const Timeline = () => {
         setPhotos(photosResponse.data);
 
         const friendsResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/friends",
+          "${API_BASE_URL}/friends",
           {
             headers: {
               authorization: `Bearer ${token}`,

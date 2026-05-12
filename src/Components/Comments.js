@@ -22,7 +22,7 @@ const Comments = ({ comments, postId, onAddComment }) => {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "https://remaining-bella-tahreem-990bcb8d.koyeb.app/comments",
+        "${API_BASE_URL}/comments",
         commentData,
         { headers: { 
           "Content-Type": "application/json",

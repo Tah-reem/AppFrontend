@@ -40,7 +40,7 @@ const Signup = () => {
   
     try {
       const response = await axios.post(
-        "https://remaining-bella-tahreem-990bcb8d.koyeb.app/register",
+        "${API_BASE_URL}/register",
         { name, email, password },
         { headers: { "Content-Type": "application/json" } }
       );

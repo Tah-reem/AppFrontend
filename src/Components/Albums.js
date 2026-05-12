@@ -4,6 +4,8 @@ import axios from "axios";
 import "./Albums.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import API_BASE_URL from "../config";
+
 
 const Albums = () => {
   const [albums, setAlbums] = useState([]);
@@ -17,7 +19,7 @@ const Albums = () => {
         const token = localStorage.getItem("token");
 
         const albumsResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/api/albums",
+          `${API_BASE_URL}/api/albums`,
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -27,7 +29,7 @@ const Albums = () => {
         setAlbums(albumsResponse.data);
 
         const photosResponse = await axios.get(
-          "https://remaining-bella-tahreem-990bcb8d.koyeb.app/api/photos",
+          "${API_BASE_URL}/api/photos",
           {
             headers: {
               authorization: `Bearer ${token}`,

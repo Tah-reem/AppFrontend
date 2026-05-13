@@ -3,6 +3,7 @@ import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import API_BASE_URL from "../config";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -40,7 +41,7 @@ const Signup = () => {
   
     try {
       const response = await axios.post(
-        "${API_BASE_URL}/register",
+        `${API_BASE_URL}/register`,
         { name, email, password },
         { headers: { "Content-Type": "application/json" } }
       );

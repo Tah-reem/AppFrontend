@@ -4,6 +4,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import "./Users.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import API_BASE_URL from "../config";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -20,7 +21,7 @@ const Users = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("${API_BASE_URL}/users", {
+      const response = await axios.get(`${API_BASE_URL}/users`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -36,7 +37,7 @@ const Users = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "${API_BASE_URL}/users",
+        `${API_BASE_URL}/users`,
         newUser,
         {
           headers: {

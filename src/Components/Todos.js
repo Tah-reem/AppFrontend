@@ -4,6 +4,7 @@ import "./Todos.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Modal, Button, Form } from "react-bootstrap";
+import API_BASE_URL from "../config";
 
 const Todos = () => {
   const [todos, setTodos] = useState([]);
@@ -19,7 +20,7 @@ const Todos = () => {
   const fetchTodos = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("${API_BASE_URL}/todos", {
+      const response = await axios.get(`${API_BASE_URL}/todos`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -35,7 +36,7 @@ const Todos = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "${API_BASE_URL}/todos",
+        `${API_BASE_URL}/todos`,
         newTodo,
         {
           headers: {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Comments.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import API_BASE_URL from "../config";
 
 const auth = localStorage.getItem("user");
 
@@ -22,7 +23,7 @@ const Comments = ({ comments, postId, onAddComment }) => {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "${API_BASE_URL}/comments",
+        `${API_BASE_URL}/comments`,
         commentData,
         { headers: { 
           "Content-Type": "application/json",

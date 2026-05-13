@@ -7,6 +7,7 @@ import "./Timeline.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import API_BASE_URL from "../config";
 
 const Timeline = () => {
   const [posts, setPosts] = useState([]);
@@ -20,7 +21,7 @@ const Timeline = () => {
         const token = localStorage.getItem("token");
 
         const postsResponse = await axios.get(
-          "${API_BASE_URL}/postings",
+          `${API_BASE_URL}/postings`,
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -28,7 +29,7 @@ const Timeline = () => {
           }
         );
         const commentsResponse = await axios.get(
-          "${API_BASE_URL}/comments",
+          `${API_BASE_URL}/comments`,
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -39,7 +40,7 @@ const Timeline = () => {
         setComments(commentsResponse.data);
 
         const photosResponse = await axios.get(
-          "${API_BASE_URL}/api/photos",
+          `${API_BASE_URL}/api/photos`,
           {
             headers: {
               authorization: `Bearer ${token}`,
@@ -49,7 +50,7 @@ const Timeline = () => {
         setPhotos(photosResponse.data);
 
         const friendsResponse = await axios.get(
-          "${API_BASE_URL}/friends",
+          `${API_BASE_URL}/friends`,
           {
             headers: {
               authorization: `Bearer ${token}`,

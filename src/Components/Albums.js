@@ -29,7 +29,7 @@ const Albums = () => {
         setAlbums(albumsResponse.data);
 
         const photosResponse = await axios.get(
-          "${API_BASE_URL}/api/photos",
+          `${API_BASE_URL}/api/photos`,
           {
             headers: {
               authorization: `Bearer ${token}`,
